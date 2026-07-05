@@ -4,7 +4,7 @@ This repository contains a centralized collection of PowerShell/Bash scripts and
 
 ## Featured Scripts
 
-### [AD User Creation Tool](https://github.com/nevermore19/sysadmin-toolbox/active-directory/addUsersFromCSV.ps1)
+### [AD User Creation Tool](https://github.com/nevermore19/sysadmin-toolbox/blob/main/Active%20Directory/addUsersFromCSV.ps1)
 Automates the creation of domain users from a human resources CSV export and and generates a simple, text-based welcome card with temporary credentials for each new employee.
 
 #### Prerequisites
