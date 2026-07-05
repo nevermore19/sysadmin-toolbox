@@ -18,3 +18,21 @@ Automates the creation of domain users from a human resources CSV export and and
 ```powershell
 .\addUsersFromCSV.ps1
 ```
+
+### [Backup Tool](https://github.com/nevermore19/sysadmin-toolbox/blob/main/Linux/backup_etc.sh)
+An interactive Bash script designed to create secure backups of the /etc configuration directory with dynamic process animation, custom output coloring, and an automated retention policy.
+
+#### Prerequisites
+- Linux Environment (Tested on Debian)
+- Root (sudo) privileges
+- Access to the target /var/backups directory
+
+#### Usage
+1. Make the script executable:
+```bash
+chmod +x backup_etc.sh
+```
+2. Execute the script with root privileges:
+```bash
+sudo ./backup_etc.sh
+```
