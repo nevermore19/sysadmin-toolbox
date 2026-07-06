@@ -13,8 +13,10 @@ Automates the creation of domain users from a human resources CSV export and and
 - A properly formatted `.csv` file
 
 #### Usage
-1. Ensure the paths inside the script point correctly to your `.csv` file and target Welcome Cards directory.
-2. Run the script via your PowerShell terminal:
+> [!IMPORTANT]
+> Ensure the paths inside the script point correctly to your `.csv` file and target Welcome Cards directory.
+
+1. Run the script via your PowerShell terminal:
 ```powershell
 .\addUsersFromCSV.ps1
 ```
@@ -35,4 +37,32 @@ chmod +x backup_etc.sh
 2. Execute the script with root privileges:
 ```bash
 sudo ./backup_etc.sh
+```
+
+### [Server Guardian](https://github.com/nevermore19/sysadmin-toolbox/blob/main/Linux/server_guardian.sh)
+A lightweight, zero-dependency service monitoring script that runs continuously via system cron to validate web endpoint availability (including subpages) and measure system resources (RAM/CPU) directly from kernel metrics.
+Includes *extra* feature: sending immediate alerts to Discord via Webhooks (optional).
+
+#### Prerequisites
+- Linux Environment (Tested on Debian)
+- Root (sudo) privileges
+- Active internet connection (for remote URL checking and Discord webhooks)
+- Standard system utilities (`curl`, `free`, `/proc` file system access)
+
+#### Usage
+> [!IMPORTANT]
+> Ensure the URLs inside the script point correctly to your website.
+
+1. Make the script executable:
+```bash
+chmod +x server_guardian.sh
+```
+2. Run manually to test outputs:
+```bash
+sudo ./server_guardian.sh
+```
+
+3. Automate execution every minute using the system scheduler (`sudo crontab -e`):
+```bash
+* * * * * /path/to/server_guardian.sh >> /var/log/server_guardian.log 2>&1
 ```
